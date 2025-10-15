@@ -1,4 +1,4 @@
-# 📡 StreamCast Pro - API Documentation
+# API Documentation
 
 ## Overview
 
