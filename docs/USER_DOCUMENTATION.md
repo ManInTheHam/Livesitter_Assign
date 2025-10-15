@@ -138,7 +138,7 @@ cp .env.example .env
 
 # Edit .env file with your settings
 # For MongoDB Atlas:
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/rtsp_overlay_app
+MONGO_URI=mongo_url
 
 # For local MongoDB:
 MONGO_URI=mongodb://localhost:27017/rtsp_overlay_app
