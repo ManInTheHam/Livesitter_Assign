@@ -2,7 +2,7 @@
 
 ## Overview
 
-StreamCast Pro provides a RESTful API for managing RTSP streams and overlay configurations. The API is built with Flask and supports real-time streaming with dynamic overlay management.
+RESTful API for managing RTSP streams and overlay configurations. The API is built with Flask and supports real-time streaming with dynamic overlay management.
 
 **Base URL**: `http://localhost:5000`
 
