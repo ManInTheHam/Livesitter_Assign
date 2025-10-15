@@ -1,4 +1,4 @@
-# 📡 StreamCast Pro - User Documentation
+# User Documentation
 
 ## Table of Contents
 
@@ -10,13 +10,12 @@
 6. [Overlay Management](#overlay-management)
 7. [Troubleshooting](#troubleshooting)
 8. [Advanced Configuration](#advanced-configuration)
-9. [FAQ](#faq)
 
 ---
 
 ## 🚀 Getting Started
 
-StreamCast Pro is a professional RTSP livestreaming application that allows you to:
+ A professional RTSP livestreaming application that allows you to:
 
 - Convert RTSP streams to web-compatible HLS format
 - Add dynamic text and image overlays to your streams
@@ -234,13 +233,6 @@ rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
 rtsp://streaming.server.com:1935/live/stream_key
 rtsp://rtsp.stream.com/live/channel1
 ```
-
-#### OBS Studio RTSP Output
-
-1. In OBS, go to **Settings > Stream**
-2. Set **Service** to "Custom"
-3. Set **Server** to your RTSP server URL
-4. Use the complete RTSP URL in StreamCast Pro
 
 ### Testing RTSP Streams
 
@@ -643,99 +635,14 @@ CORS(app, origins=['https://yourdomain.com'])
 
 ---
 
-## ❓ FAQ
-
-### General Questions
-
-**Q: Can I use StreamCast Pro for commercial purposes?**
-A: Check the license file for usage terms. Generally, open-source projects allow commercial use with proper attribution.
-
-**Q: What video formats are supported?**
-A: Any format supported by FFmpeg, including H.264, H.265, VP8, VP9. Output is always HLS (H.264).
-
-**Q: Can I stream to multiple platforms simultaneously?**
-A: Currently, StreamCast Pro converts RTSP to HLS for web viewing. For multi-platform streaming, consider using OBS Studio with RTMP outputs.
-
-### Technical Questions
-
-**Q: Why use HLS instead of direct RTSP in browsers?**
-A: Browsers don't natively support RTSP. HLS provides wide browser compatibility and adaptive bitrate streaming.
-
-**Q: Can I add custom overlay types?**
-A: Yes, modify the OverlayEditor component to support additional overlay types like shapes, animations, or widgets.
-
-**Q: How do I reduce stream latency?**
-A: Adjust FFmpeg parameters in ffmpeg_manager.py:
-
-- Reduce HLS segment duration
-- Use faster encoding presets
-- Minimize buffer sizes
-
-**Q: Can I run multiple streams simultaneously?**
-A: Yes, use different stream keys for each stream. Monitor system resources as each stream requires CPU for encoding.
-
-### Troubleshooting Questions
-
-**Q: Stream works in VLC but not in StreamCast Pro**
-A: Check FFmpeg compatibility with your stream format. Some proprietary codecs may not be supported.
-
-**Q: Overlays disappear when I refresh the page**
-A: Ensure MongoDB is connected and overlay presets are saved. Check browser console for API errors.
-
-**Q: High CPU usage during streaming**
-A: Adjust FFmpeg encoding settings for lower CPU usage:
-
-- Use hardware acceleration if available
-- Reduce video resolution/bitrate
-- Use faster encoding presets
-
-### Setup Questions
-
-**Q: Do I need a powerful server for streaming?**
-A: Requirements depend on:
-
-- Number of concurrent streams
-- Video resolution and bitrate
-- Encoding settings
-- A modern dual-core CPU can handle 1-2 HD streams
-
-**Q: Can I use this with IP cameras?**
-A: Yes, most IP cameras support RTSP output. Check your camera's documentation for the correct RTSP URL format.
-
-**Q: How do I backup my overlay presets?**
-A:
-
-- **MongoDB**: Use mongodump/mongorestore
-- **File Database**: Copy the overlays.json file
-- **Manual**: Export presets via API and save JSON
-
----
-
-## 📞 Support and Resources
-
-### Getting Help
-
-- **Documentation**: Check API and User documentation
-- **Issues**: Create GitHub issues for bugs
-- **Discussions**: Use GitHub discussions for questions
-- **Community**: Join project Discord/Slack if available
-
-### Useful Resources
+## Useful Resources
 
 - **FFmpeg Documentation**: [ffmpeg.org/documentation.html](https://ffmpeg.org/documentation.html)
 - **MongoDB Docs**: [docs.mongodb.com](https://docs.mongodb.com/)
 - **React Documentation**: [reactjs.org/docs](https://reactjs.org/docs/)
 - **HLS Specification**: [tools.ietf.org/html/rfc8216](https://tools.ietf.org/html/rfc8216)
 
-### Contributing
-
-- **Bug Reports**: Include system info, logs, and reproduction steps
-- **Feature Requests**: Describe use case and expected behavior
-- **Code Contributions**: Follow project coding standards
-- **Documentation**: Help improve guides and examples
-
 ---
 
-**Last Updated**: October 15, 2025  
-**Version**: 1.0.0  
+**Last Updated**: October 15, 2025
 **Compatibility**: Windows 10+, macOS 10.15+, Linux Ubuntu 18.04+
