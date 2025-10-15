@@ -1,4 +1,4 @@
-# 📡 StreamCast Pro - RTSP Overlay App
+# RTSP Overlay 
 
 **Professional RTSP livestreaming with dynamic overlays and modern web interface.**
 
@@ -298,18 +298,6 @@ vlc rtsp://your-stream-url
                        └──────────────────┘
 ```
 
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our contributing guidelines:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit changes**: `git commit -m 'Add amazing feature'`
-4. **Push to branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
 ### Development Setup
 
 ```bash
@@ -340,7 +328,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **MongoDB** - Database solution
 - **HLS.js** - JavaScript HLS player
 - **React-RnD** - Drag and drop components
-
----
-
-**Built with ❤️ for the streaming community**
